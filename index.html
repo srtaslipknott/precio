@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro No Pagamos Cooperativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario de Seguro</h1>
+
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="tipoSeguro">Tipo de seguro:</label>
+        <select id="tipoSeguro" name="tipoSeguro" onchange="calcularPrecio()" required>
+            <option value="basico">Básico</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="premium">Premium</option>
+        </select>
+
+        <div id="precio">Precio: </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="./precio.js"></script>
+</body>
+</html>
